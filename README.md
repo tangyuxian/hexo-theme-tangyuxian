@@ -26,7 +26,7 @@
 
 ## ![img](https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@latest/PicGo/20210429105429.png)演示
 
-<img src="https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@latest/head/head.jpg" alt="img" style="zoom:5%;" /> [**糖羽仙**](https://www.tangyuxian.com)
+[**糖羽仙**](https://www.tangyuxian.com)
 
 ## ![img](https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@latest/PicGo/20210429112034.png)特色功能
 
