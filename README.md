@@ -26,7 +26,7 @@
 
 ## ![img](https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@latest/PicGo/20210429105429.png)演示
 
-<img src="https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@latest/head/head.jpg" alt="img" style="zoom:10%;" /> [**糖羽仙**](https://www.tangyuxian.com)
+<img src="https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@latest/head/head.jpg" alt="img" style="zoom:5%;" /> [**糖羽仙**](https://www.tangyuxian.com)
 
 ## ![img](https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@latest/PicGo/20210429112034.png)特色功能
 
@@ -59,10 +59,11 @@
    └── README.md       //说明文档
    ```
    
+
 `_config.yml`属于本主题核心配置项,本主题的所有功能性内容将在本主题中配置
-   
+
 注:静态立绘板的配置图在 `background character` 中
-   
+
 5. 即时通讯插件
 
    `daovoice`需要您到[daovoice官网](http://dashboard.daovoice.io/)申请key并配置
