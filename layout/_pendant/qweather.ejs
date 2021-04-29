@@ -1,0 +1,35 @@
+<div class="qweather" >
+    <div id="he-plugin-standard"></div>
+    <div class="qweather-logo">
+
+    </div>
+
+</div>
+<style>
+    .qweather{
+        position: relative;
+    }
+    .qweather-logo{
+        position: absolute;
+        right: 0;
+        top: -15px;
+        width: 40px;
+        height: 40px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+</style>
+<script>
+  WIDGET = {
+    "CONFIG": {
+      "layout": "<%- theme.qweather.layout %>",
+      "width": "<%- theme.qweather.width %>",
+      "height": "<%- theme.qweather.height %>",
+      "background": "<%- theme.qweather.background %>",
+      "dataColor": "<%- theme.qweather.dataColor %>",
+      "borderRadius": "<%- theme.qweather.borderRadius %>",
+      "key": "<%- theme.qweather.key %>"
+    }
+  }
+</script>
+<script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>

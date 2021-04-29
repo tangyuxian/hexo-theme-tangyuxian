@@ -1,0 +1,15 @@
+<% if (page.hide_copyright !== true && theme.copyright || page.copyright) { %>
+  <div class="nexmoe-post-copyright">
+    <strong><%- __('copyright.author') %>：</strong><%= page.author || config.author  %><br>
+    <% if (page.from) { %>
+      <strong><%- __('copyright.from') %>：</strong><%- link_to(page.from, page.from, {external: true}) %><br>
+    <% } %>
+    <strong><%- __('copyright.permalink') %>：</strong><%- link_to(page.permalink, page.permalink, {external: true}) %><br>
+
+    <% if (page.copyright) { %>
+      <%- page.copyright %>
+    <% } else { %>
+      <%- theme.copyright %>
+    <% } %>
+  </div>
+<% } %>

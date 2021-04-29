@@ -1,0 +1,23 @@
+<% if (theme.searchType == "web"){ %>
+<div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+        <form id="search_form" action_e="<%= theme.search %>" onsubmit="return search();">
+            <label><input id="search_value" name="q" type="search" placeholder="<%= __('search') %>"></label>
+        </form>
+    </div>
+</div>
+<% } %>
+<!-- 站内搜索 -->
+<% if (theme.searchType == "local"){ %>
+<div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search" >
+        <form id="search-form">
+            <label><input type="text" id="local-search-input" name="q" results="0" placeholder="站内搜索" class="input form-control" autocomplete="off" autocorrect="off"/></label>
+            <!-- 清空/重置搜索框 -->
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+        </form>
+    </div>
+    <div id="local-search-result"></div> <!-- 搜索结果区 -->
+    <!-- <p class='no-result'></p> 无匹配时显示，注意在 CSS 中设置默认隐藏 -->
+</div>
+<% } %>

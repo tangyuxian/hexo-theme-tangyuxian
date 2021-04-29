@@ -1,0 +1,44 @@
+<div class="nexmoe-post">
+  <% if (page.cover){ %>
+      <div class="nexmoe-post-cover" style="padding-bottom: <%- page.coverHeight/page.coverWidth*100 %>%;"> 
+          <img data-src="<%- page.cover %>" data-sizes="auto" alt="<%= page.title %>" class="lazyload">
+          <h1><%= page.title %></h1>
+      </div>
+  <%}  else{ %>
+      <div class="nexmoe-post-cover" style="padding-bottom: <%- theme.background.height/theme.background.width*100 %>%;"> 
+          <img data-src="<%- theme.background.path %>" data-sizes="auto" alt="<%= page.title %>" class="lazyload">
+          <h1><%= page.title %></h1>
+      </div>
+  <% } %>
+  
+  <%- partial('_partial/_post/meta') %>
+
+  <div class="nexmoe-post-right">
+    <% if (page.toc || theme.function.globalToc){ %>
+      <div class="nexmoe-fixed">
+        <div class="nexmoe-valign">
+            <div class="nexmoe-toc">
+                <% const toc_obj = toc(page.content, {list_number: true}); %>
+                <% if (toc_obj.length > 0) { %>
+                  <%- toc_obj %>
+                <% } %>
+            </div>
+        </div>
+      </div>
+    <%} %>
+  </div>
+
+  <article>
+    <%- image_auto_lazyload(page.content) %>
+  </article>
+
+  <% if (!page.reprint){ %>
+    <%- partial('_partial/copyright') %>
+  <% } %>
+  
+  <%- partial('_partial/_post/tag') %>
+
+  <div class="nexmoe-post-footer">
+    <%- partial('_partial/comment') %>
+  </div>
+</div>
