@@ -8,8 +8,6 @@ function getQueryVariable(variable) {
     return(false);
 }
 function runtimeApp() {
-    $("#nexmoe-background").hide();
-    $("#nexmoe-pendant").hide();
     $("#live2d-widget").remove();
     $("a").each(function () {
         $(this).attr("href", "#");
@@ -17,13 +15,13 @@ function runtimeApp() {
 
     })
     window.onload = function () {
-        var url = '/css/webapp.css';
-        var doc = document;
-        var link = doc.createElement("link");
+        let url = '/css/webapp.css';
+        let doc = document;
+        let link = doc.createElement("link");
         link.setAttribute("rel", "stylesheet");
         link.setAttribute("type", "text/css");
         link.setAttribute("href", url);
-        var heads = doc.getElementsByTagName("head");
+        let heads = doc.getElementsByTagName("head");
         if (heads.length) {
             heads[0].prepend(link);
         } else {
