@@ -8,29 +8,36 @@ function getQueryVariable(variable) {
     return(false);
 }
 function runtimeApp() {
-    $("#live2d-widget").remove();
-    $("a").each(function () {
-        $(this).attr("href", "#");
-        $(this).attr("onClick", "return false");
-
-    })
     window.onload = function () {
-        let url = '/css/webapp.css';
-        let doc = document;
-        let link = doc.createElement("link");
-        link.setAttribute("rel", "stylesheet");
-        link.setAttribute("type", "text/css");
-        link.setAttribute("href", url);
-        let heads = doc.getElementsByTagName("head");
-        if (heads.length) {
-            heads[0].prepend(link);
-        } else {
-            doc.documentElement.prepend(link);
+        $("body").css("opacity",1)
+        if(getQueryVariable('from') && getQueryVariable('from') == "app"){
+            $("a").each(function () {
+                $(this).attr("href", "#");
+                $(this).attr("onClick", "return false");
+            })
+            $("#daodream-container").css("display","none")
+            $("#nexmoe-header").css("display","none")
+            $("#nexmoe-background").css("display","none")
+        }else{
+            $("#daodream-container").css("display","block")
+            $("#nexmoe-header").css("display","block")
+            $("#nexmoe-background").css("display","block")
         }
+        // let doc = document;
+        // let link = doc.createElement("link");
+        // link.setAttribute("rel", "stylesheet");
+        // link.setAttribute("type", "text/css");
+        // link.setAttribute("href", url);
+        // let heads = doc.getElementsByTagName("head");
+        // if (heads.length) {
+        //     heads[0].prepend(link);
+        // } else {
+        //     doc.documentElement.prepend(link);
+        // }
     }
 }
-if(getQueryVariable('from') && getQueryVariable('from') == "app"){
-    runtimeApp();
-}
+console.log("来源",getQueryVariable('from'))
+runtimeApp();
+
 
 
