@@ -1,6 +1,5 @@
 
 const postCover = require('../../source/js/postcover.js')
-console.log(hexo.theme)
 function coverAutoPost(tags) {
     let coverUrl = "";
     for(let i=0;i<tags.data.length;i++){
