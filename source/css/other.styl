@@ -1,4 +1,3 @@
-
 #nexmoe-background {
   .nexmoe-bg {
     z-index: -2;
@@ -134,33 +133,70 @@
   }
 }
 
+//内容区
+#nexmoe-content {
+  .nexmoe-posts {
+    .nexmoe-post {
+      position: relative
+      .nexmoe-post-top {
+        position:absolute
+        top: 0
+        left: 0
+        z-index: 99
+        padding: 0 10px
+        font-size: 14px
+        border-radius 15px 0 8px 0
+        background-color: $theme_color_time
+        height: 30px
+        color: $theme_color
+        display: flex
+        align-items: center
+        .nexmoe-post-top-img{
+          width: 15px
+          height: 15px
+          background-image: url($theme_post_top)
+          background-size: 100% 100%
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
 #nexmoe-pendant {
-  .nexmoe-pd{
-    width :300px
+  .nexmoe-pd {
+    width: 300px
+
     .clock {
       border: solid 2.8vh $theme_color
-      box-shadow :0 1.4vh 2.8vh $theme_color_shadow
+      box-shadow: 0 1.4vh 2.8vh $theme_color_shadow
+
       .memory {
         background-color: #a50e00 !important
       }
-      .clock_logo{
-        background-image :url($bg_clock_logo)
+
+      .clock_logo {
+        background-image: url($bg_clock_logo)
         //box-shadow :0 1.4vh 2.8vh $theme_color_shadow
       }
     }
-    .qweather{
-      #he-plugin-standard{
-        border :2px solid $theme_color
+
+    .qweather {
+      #he-plugin-standard {
+        border: 2px solid $theme_color
         box-shadow: 0 1px 0 0 $theme_color_shadow, 0 1px 2px 0 $theme_color_shadow;
-        .wv-lt-refresh{
-          display :none
+
+        .wv-lt-refresh {
+          display: none
         }
-        .wv-v-v-forecast{
-          padding:1em .5em 1em
+
+        .wv-v-v-forecast {
+          padding: 1em .5em 1em
         }
       }
-      .qweather-logo{
-        background-image :url($bg_qweather_logo);
+
+      .qweather-logo {
+        background-image: url($bg_qweather_logo);
       }
     }
 
@@ -179,9 +215,10 @@ article {
       box-shadow: 0 2px 12px $theme_color_shadow;
     }
   }
-  h4,h5,h6{
-    &:before{
-      color:$theme_color
+
+  h4, h5, h6 {
+    &:before {
+      color: $theme_color
     }
   }
 
