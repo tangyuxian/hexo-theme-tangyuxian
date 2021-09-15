@@ -92,6 +92,5 @@ var searchFunc = function (path, search_id, content_id) {
         }
     });
 };
-console.log("执行本文件")
 var path = "/search.xml";
 searchFunc(path, 'local-search-input', 'local-search-result');

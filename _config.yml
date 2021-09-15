@@ -1,19 +1,22 @@
-avatar: https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@latest/head/head.jpg # 网站 Logo
+avatar: https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@master/head/head.jpg # 网站 Logo
 background: # 既是博客的背景，又是文章默认头图
-  path: https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@latest/background/xiaomai.jpg
-  character: https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@latest/background/lihui.png
+  path: https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@master/background/xiaomai.jpg
+  character: https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@master/background/lihui.png
   width: 1440
   height: 350
+  autoCoverWidth: 1200
+  autoCoverHeight: 320
 favicon:
-  href: https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@latest/head/head.jpg # 网站图标
+  href: https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@master/head/head.jpg # 网站图标
   type: image/png # 图标类型，可能的值有(image/png, image/vnd.microsoft.icon, image/x-icon, image/gif)
 
 function: # 功能开关，可选值（true,false）
   globalToc: false # 开启该功能会自动开启文章 TOC（文章目录） 功能
   goTop: true # 是否显示回到顶部开关
+  copy: false
 
 # 附加图标库 用于自定义字体 www.iconfont.cn 登录->创建项目->添加图标->获取链接
-iconlib: //at.alicdn.com/t/font_2421060_07c3w9e00sab.css # //at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css
+iconlib: //at.alicdn.com/t/font_2421060_cksn56jaae6.css # //at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css
 
 searchType: local   #可选 local本地 web 网址
 search: https://www.google.com/search?q= # https://www.google.com/search?q={你的博客链接}  #当searchType为web时可用
