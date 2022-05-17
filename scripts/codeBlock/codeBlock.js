@@ -2,7 +2,7 @@ const js = hexo.extend.helper.get('js').bind(hexo)
 const css = hexo.extend.helper.get('css').bind(hexo);
 //依赖
 hexo.extend.injector.register('body_end', () => {
-  return js('https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js');
+  return js('https://unpkg.com/clipboard@2.0.8/dist/clipboard.min.js');
 });
 //核心包
 hexo.extend.injector.register('body_end', () => {

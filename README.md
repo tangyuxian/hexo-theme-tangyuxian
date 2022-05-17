@@ -42,7 +42,16 @@
 
 1. 使用本主题包前请阅读[HEXO官方文档](https://hexo.io/zh-cn/docs/),本主题包仅适用于HEXO,请确认您已安装HEXO相关依赖
 
-2. 本主题包基于hexo-theme-nexmoe-2.5.9深度定制,请阅读[nexmoe官方文档](https://docs.nexmoe.com/),了解基础配置项
+2. 开始使用本主题
+
+   - 注意安装`wordcount`插件,用来激活字数统计功能:`npm i --save hexo-wordcount`
+
+   - 请修改位于您项目根目录的`_config.yml`的文件,将默认代码高亮关闭处理
+
+   ```json
+   highlight:
+     enable: false
+   ```
 
 3. 将本主题下载后放至您的hexo项目根目录的 `themes` 下,并开启使用本主题
 
