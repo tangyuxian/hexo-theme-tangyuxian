@@ -1,13 +1,13 @@
-avatar: https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@master/head/head.jpg # 网站 Logo
+avatar: /images/head/head.jpg # 网站 Logo
 background: # 既是博客的背景，又是文章默认头图
-  path: https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@master/background/xiaomai.jpg
-  character: https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@master/background/lihui.png
+  path: /images/background/xiaomai.jpg
+  character: /images/background/lihui.png
   width: 1440
   height: 350
   autoCoverWidth: 1200
   autoCoverHeight: 320
 favicon:
-  href: https://cdn.jsdelivr.net/gh/tangyuxian/blog_image@master/head/head.jpg # 网站图标
+  href: /images/head/head.jpg # 网站图标
   type: image/png # 图标类型，可能的值有(image/png, image/vnd.microsoft.icon, image/x-icon, image/gif)
 
 function: # 功能开关，可选值（true,false）
@@ -16,20 +16,20 @@ function: # 功能开关，可选值（true,false）
   copy: false
 
 # 附加图标库 用于自定义字体 www.iconfont.cn 登录->创建项目->添加图标->获取链接
-iconlib: //at.alicdn.com/t/font_2421060_cksn56jaae6.css # //at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css
+iconlib: //at.alicdn.com/t/font_2421060_8z08qcz5sq3.css # //at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css
 
 searchType: local   #可选 local本地 web 网址
 search: https://www.google.com/search?q= # https://www.google.com/search?q={你的博客链接}  #当searchType为web时可用
 
 cdn: # 这里可以修改站点使用的库的CDN
   disqusjs:
-    css: https://cdn.jsdelivr.net/npm/disqusjs@1.2.5/dist/disqusjs.min.css
-    js: https://cdn.jsdelivr.net/npm/disqusjs@1.2.5/dist/disqus.min.js
+    css: https://unpkg.com/disqusjs@1.2.5/dist/disqusjs.min.css
+    js: https://unpkg.com/disqusjs@1.2.5/dist/disqus.min.js
   gitalk:
-    css: https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css
-    js: https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js
+    css: https://unpkg.com/gitalk@1.5.0/dist/gitalk.min.css
+    js: https://unpkg.com/gitalk@1.5.0/dist/gitalk.min.js
   valine:
-    js: https://cdn.jsdelivr.net/npm/valine@1.3.9/dist/Valine.min.js
+    js: https://unpkg.com/valine@1.3.9/dist/Valine.min.js
   copy: https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js
 menu:
   回到首页:
@@ -44,6 +44,9 @@ menu:
   我的朋友:
     - /friend.html
     - icon-cola
+  下载中心:
+    - /download.html
+    - icon-tangguo
 # 侧边模块
 widgets:
 - search
@@ -67,11 +70,11 @@ social:
     - icon-mail-fill
     - rgb(249,8,8)
     - rgba(249,8,8,.1)
-#  哔哩哔哩:
-#    - https://space.bilibili.com/000000
-#    - icon-bilibili
-#    - rgb(231, 106, 141)
-#    - rgba(231, 106, 141, .15)
+  CSDN:
+    - https://blog.csdn.net/qq_40621378?type=blog
+    - icon-csdn
+    - rgb(199,29,35)
+    - rgba(199,29,35,.1)
   博客园:
     - https://www.cnblogs.com/lovetangyuxian/
     - icon-bokeyuan
