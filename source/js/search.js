@@ -21,11 +21,11 @@ var searchFunc = function (path, search_id, content_id) {
                 if (this.value.trim().length <= 0) {
                     return;
                 }
-
+                console.log(datas)
                 // perform local searching
                 for (let index in datas) {
-                    if(datas.length>8 && index == 7){
-                        break;
+                    if(index > 7){
+
                     }
                     let data = datas[index];
                     //datas.forEach(function(data) {
@@ -33,7 +33,7 @@ var searchFunc = function (path, search_id, content_id) {
                     var content_index = [];
                     var data_title = data.title.trim().toLowerCase();
                     var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
-                    var data_url = '/' + data.url;
+                    var data_url = data.url;
                     var index_title = -1;
                     var index_content = -1;
                     var first_occur = -1;
@@ -56,7 +56,6 @@ var searchFunc = function (path, search_id, content_id) {
                     }
                     // show search results
                     if (isMatch) {
-
                         str += "<div class=\"search-result-list-item\"><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
 
                         var content = data.content.trim().replace(/<[^>]+>/g, "");
