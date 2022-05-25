@@ -72,22 +72,22 @@
       width: 100%
       position: absolute;
       z-index: 33;
-      top: 48px;
+      top: 65px;
       box-sizing: border-box;
       background-color: #fff;
-      border-radius: 0 0 15px 15px;
-      overflow: hidden;
+      border-radius: 15px;
+      overflow: auto;
       box-shadow: 0 2px 12px $theme_color_shadow;
-      border-top: 1px solid #fff
       animation: anim 0.5s;
-
+      max-height:200px;
       .search-result-list-item {
         &:last-child {
           border-bottom: 0;
         }
         box-sizing: border-box;
-        padding: 15px 0;
+        padding: 10px 0;
         margin 0 10px;
+        font-size:14px;
         border-bottom: 1px solid #ccc;
 
         a {
