@@ -21,12 +21,9 @@ var searchFunc = function (path, search_id, content_id) {
                 if (this.value.trim().length <= 0) {
                     return;
                 }
-                console.log(datas)
+
                 // perform local searching
                 for (let index in datas) {
-                    if(index > 7){
-
-                    }
                     let data = datas[index];
                     //datas.forEach(function(data) {
                     var isMatch = true;
