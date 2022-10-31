@@ -69,6 +69,7 @@
      coverHeight: 320(可选:封面高度)
      author:文章作者(可选)
      from:文章来源(可选)
+     top: true 是否置顶(可选)
      ---
      ```
 
