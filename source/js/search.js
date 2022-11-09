@@ -21,7 +21,6 @@ var searchFunc = function (path, search_id, content_id) {
                 if (this.value.trim().length <= 0) {
                     return;
                 }
-
                 // perform local searching
                 for (let index in datas) {
                     let data = datas[index];

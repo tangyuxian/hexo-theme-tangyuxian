@@ -1,6 +1,6 @@
-## ![img](https://tangyuxian.github.io/images/PicGo/20210429104219.png)总览
+## ![img](https://cdn.tangyuxian.com/PicGoImages/20210429104219.png)总览
 
-![image-20210429103541217](https://tangyuxian.github.io/images/PicGo/20210429104818.png)
+![image-20210429103541217](https://cdn.tangyuxian.com/PicGoImages/20210429104818.png)
 
 ------
 
@@ -19,16 +19,16 @@
 <img alt="Download" src="https://img.shields.io/badge/download-29.9KB-brightgreen.svg"/>
 </p>
 
-## ![img](https://tangyuxian.github.io/images/PicGo/20210429104626.png)贡献
+## ![img](https://cdn.tangyuxian.com/PicGoImages/20210429104626.png)贡献
 
 > 本主题基于[**hexo-theme-nexmoe**](https://github.com/tangyuxian/hexo-theme-nexmoe)深度定制,感谢原作者开源
 >
 
-## ![img](https://tangyuxian.github.io/images/PicGo/20210429105429.png)演示
+## ![img](https://cdn.tangyuxian.com/PicGoImages/20210429105429.png)演示
 
 [**糖羽仙**](https://www.tangyuxian.com)
 
-## ![img](https://tangyuxian.github.io/images/PicGo/20210429112034.png)特色功能
+## ![img](https://cdn.tangyuxian.com/PicGoImages/20210429112034.png)特色功能
 
 1. 基于hexo-theme-nexmoe-2.5.9深度定制,继承其所有优点,扩展性更高,兼容性更强;
 2. 主题色百变搭配,将想象力全权交给您
@@ -38,7 +38,7 @@
 6. 即时通讯插件自由开关,让联系您的人与您实时沟通,不错过任何一次机会
 7. 更多特色等待您来探索
 
-## ![img](https://tangyuxian.github.io/images/PicGo/20210429114146.png)教程
+## ![img](https://cdn.tangyuxian.com/PicGoImages/20210429114146.png)教程
 
 1. 使用本主题包前请阅读[HEXO官方文档](https://hexo.io/zh-cn/docs/),本主题包仅适用于HEXO,请确认您已安装HEXO相关依赖
 
@@ -130,13 +130,13 @@
 
    
 
-## ![img](https://tangyuxian.github.io/images/PicGo/20210429114804.png)许可
+## ![img](https://cdn.tangyuxian.com/PicGoImages/20210429114804.png)许可
    > 根据 Apache License 2.0 许可证开源。
 
    <a href="https://github.com/tangyuxian/hexo-theme-tangyuxian/blob/master/LICENSE"><img alt="license" src="https://img.shields.io/github/license/tangyuxian/hexo-theme-tangyuxian.svg"/></a>
 
    
 
-## ![img](https://tangyuxian.github.io/images/PicGo/20210429144611.png)卖萌
+## ![img](https://cdn.tangyuxian.com/PicGoImages/20210429144611.png)卖萌
 
 喜欢的小伙伴记得start哦
