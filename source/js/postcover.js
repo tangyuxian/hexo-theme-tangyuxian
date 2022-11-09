@@ -8,6 +8,7 @@ module.exports =  {
   webpack:"/images/post/webpack.jpg",
   git:"/images/post/git.jpg",
   java:"/images/post/java.jpg",
+  echarts:"/images/post/echarts.jpg",
   微信小程序:"/images/post/wechat_applet.jpg",
   浏览器:"/images/post/browser.jpg",
   算法:"/images/post/algorithm.jpg",
