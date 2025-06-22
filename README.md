@@ -174,9 +174,10 @@
    ```
    customStyles:
      - custom.css
+     - themes/umaru/index.css
    ```
 
-   然后，在名为 `source` 的路径中创建一个名为 `custom.css` 的文件。这样就可以编写自己的自定义样式。
+   然后，在名为 `source` 的路径中创建和配置对应路径的文件。这样就可以编写自己的自定义样式，下面会覆盖上面，注意顺序。
 
 7. 本地搜索功能依赖
 
