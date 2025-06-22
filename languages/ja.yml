@@ -1,20 +1,18 @@
-continue: 続きを読む
+continue: もっと見る
 nav:
-  home: ホーム
-
+  home: ホームに戻る
 search: 検索
-archive: アーカイブ
-recent_posts: 最近の文章
-categories: カテゴリ
+archive: 記事のアーカイブ
+recent_posts: 最新記事
+categories: カテゴリ管理
+hitokoto: 一言
 tagcloud: タグクラウド
-social: タグクラウド
-
+social: ソーシャルボタン
 count:
-  articles: 文章
+  articles: 記事
   tags: タグ
   categories: カテゴリ
-
 copyright:
-  author: 著者
-  permalink: リンク
+  author: オリジナルの投稿者
+  permalink: 本文リンク
   from: ソース

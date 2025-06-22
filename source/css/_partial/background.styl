@@ -1,0 +1,41 @@
+#nexmoe-background {
+    .nexmoe-bg {
+        opacity: 0.2;
+        background-size: cover;
+        filter: blur(30px);
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -2;
+    }
+    .nexmoe-character {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        background-image: var(--character);
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-position-x: -100px
+    }
+
+    .mdui-appbar {
+        padding: 10px;
+        display: none;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+@media screen and (max-width: 1023px) {
+    #nexmoe-background {
+        .mdui-appbar {
+            display: block !important;
+        }
+    }
+}

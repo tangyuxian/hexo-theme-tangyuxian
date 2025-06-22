@@ -1,13 +1,22 @@
 <div class="qweather" >
-    <div id="he-plugin-standard"></div>
+    <div id="he-plugin-standard">
+        <iframe allowtransparency="true" frameborder="0" width="304" height="96" scrolling="no" src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=1&t=0&v=0&d=2&bd=0&k=000000&f=ff8040&ltf=009944&htf=cc0000&q=1&e=1&a=1&c=54511&w=300&h=96&align=center"></iframe>
+    </div>
     <div class="qweather-logo">
 
     </div>
-
 </div>
 <style>
     .qweather{
         position: relative;
+        padding-right: 5px;
+    }
+    .qweather #he-plugin-standard {
+        border: 2px solid var(--color-primary);
+        box-shadow: 0 1px 0 0 var(--color-primary), 0 1px 2px 0 var(--color-primary);
+        border-radius: 8px;
+        width: 300px;
+        overflow: hidden;
     }
     .qweather-logo{
         position: absolute;
@@ -15,21 +24,8 @@
         top: -15px;
         width: 40px;
         height: 40px;
+        background-image: var(--qweather-logo);
         background-size: 100% 100%;
         background-repeat: no-repeat;
     }
 </style>
-<script>
-  WIDGET = {
-    "CONFIG": {
-      "layout": "<%- theme.qweather.layout %>",
-      "width": "<%- theme.qweather.width %>",
-      "height": "<%- theme.qweather.height %>",
-      "background": "<%- theme.qweather.background %>",
-      "dataColor": "<%- theme.qweather.dataColor %>",
-      "borderRadius": "<%- theme.qweather.borderRadius %>",
-      "key": "<%- theme.qweather.key %>"
-    }
-  }
-</script>
-<script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>
