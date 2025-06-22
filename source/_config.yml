@@ -39,6 +39,8 @@ imageCDN: # 图片 CDN 功能
 # 自定义样式，启用后可在站点的source文件夹下新建custom.css自定义站点样式
 customStyles:
   - custom.css
+  - themes/umaru/index.css
+  - themes/asuka/index.css
 
 # 附加图标库 使用说明：https://docs.nexmoe.com/config/icon
 iconlib: //at.alicdn.com/t/font_2421060_8z08qcz5sq3.css # //at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css
