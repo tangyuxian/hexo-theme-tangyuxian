@@ -30,12 +30,12 @@
 
 ## ![img](https://cdn.tangyuxian.com/PicGoImages/20210429112034.png)特色功能
 
-1. 基于hexo-theme-nexmoe-2.5.9深度定制,继承其所有优点,扩展性更高,兼容性更强;
+1. 基于hexo-theme-nexmoe-4.2.2深度定制,继承其所有优点,扩展性更高,兼容性更强;
 2. 主题色百变搭配,将想象力全权交给您
 3. 本地搜索功能与互联网搜索功能控件自由切换,随心而改
 4. 动态看板娘与静态立绘板互相组合,动静结合互相辉映
 5. 右侧时钟天气控件,自由开关,看文学习不忘记时间,天气变化随时注意,细微之处皆是关怀
-6. 即时通讯插件自由开关,让联系您的人与您实时沟通,不错过任何一次机会
+6. ~~即时通讯插件自由开关,让联系您的人与您实时沟通,不错过任何一次机会~~
 7. 更多特色等待您来探索
 
 ## ![img](https://cdn.tangyuxian.com/PicGoImages/20210429114146.png)教程
@@ -44,14 +44,24 @@
 
 2. 开始使用本主题
 
-   - 注意安装`wordcount`插件,用来激活字数统计功能:`npm i --save hexo-wordcount`
-
-   - 请修改位于您项目根目录的`_config.yml`的文件,将默认代码高亮关闭处理
+   - 运行以下命令以安装 Tangyuxian：
 
      ```
-     highlight:
-       enable: false
+     npm install hexo-theme-tangyuxian hexo-renderer-inferno
      ```
+
+   - 使用Tangyuxian
+
+     - 方法1 在项目的根目录中编辑 `_config.yml`。将名为 `theme` 的键的值更改为 `tangyuxian`
+     - 方法2
+
+     ```
+     hexo config theme tangyuxian
+     ```
+
+   - 配置tangyuxian
+
+     在项目的根目录中编辑 `_config.tangyuxian.yml`。
 
    - 设置文章信息
 
@@ -72,9 +82,9 @@
      ---
      ```
 
-   - 自动通过标签来匹配封面(beta)
+   - 自动通过标签来匹配封面
 
-     目前标签名对应的封面配置位置在主题根目录(`/source/js/postcover.js`),可在该文件下配置标签对应的封面,文章封面的优先级是(文章md文件配置的封面>自动匹配的封面>在主题包`_config.yml`全局设置的背景图)
+     在`_config.tangyuxian.yml`的`tagsCovers`下可配置对应类型的封面，默认内置了常见封面，可直接使用，也可自行配置封面。
 
    - 文章归档
 
@@ -90,7 +100,23 @@
 
    - 更多...
 
-3. 将本主题下载后放至您的hexo项目根目录的 `themes` 下,并开启使用本主题
+3. 修改本主题并在本地使用方法
+
+   在根目录的`package.json`中增加配置项
+
+   ```json
+     "workspaces": [
+       "packages/*"
+     ]
+   ```
+
+   在根目录创建文件夹`packages`，将本主题下载后放到该文件夹里，然后在根目录的`package.json`中修改内容
+
+   ```
+   "hexo-theme-tangyuxian": "workspace:^"
+   ```
+
+   之后就可以在本地随时修改本主题
 
 4. 以下是本主题包的目录结构图
 
@@ -99,24 +125,58 @@
    ├── layout			//ejs模板布局文件夹
    ├── scripts         //自定义执行脚本		
    ├── source          //静态资源文件夹
-   ├── _config.styl	//样式配置文件
-   ├── _config.yml		//主题配置文件
    ├── package.json    //node配置项
    └── README.md       //说明文档
    ```
-   
 
-`_config.yml`属于本主题核心配置项,本主题的所有功能性内容将在本主题中配置
 
-注:静态立绘板的配置图在 `background character` 中
+5. ~~即时通讯插件~~
 
-5. 即时通讯插件
-
-   `daovoice`需要您到[daovoice官网](http://dashboard.daovoice.io/)申请key并配置
+   ~~`daovoice`需要您到[daovoice官网](http://dashboard.daovoice.io/)申请key并配置~~
 
 6. 主题色个性化配置
 
-   `_config.styl`属于本主题个性化配置项,主题色和部分插件的自定义图案可在该配置项中配置,未来版本会不断扩展可配置内容
+   默认配置内容如下：
+
+   ```css
+   :root {
+       --gutter: 24px;
+       --radius: 13px;
+       --color-primary: #e67249;
+       --color2: rgba(255, 118, 30, 0.5);
+       --color3: #ffb900;
+       --color4: #33d57a;
+       --color5: #00dbff;
+       --color6: #1a98ff;
+       --color7: #9090ff;
+       --color-primary-bg: rgba(255, 78, 106, 0.15);
+       --color2-bg: rgba(255, 118, 30, 0.15);
+       --color3-bg: rgba(255, 185, 0, 0.15);
+       --color4-bg: rgba(51, 213, 122, 0.15);
+       --color5-bg: rgba(0, 219, 255, 0.15);
+       --color6-bg: rgba(26, 152, 255, 0.15);
+       --color7-bg: rgba(144, 144, 255, 0.15);
+       --color-shadow: rgba(161, 177, 204, 0.4);
+       --color-card: #fff;
+       --color-text-1: #111;
+       --color-text-2: #444;
+       --color-text-3: #363636;
+       --clock-logo:url("/images/background/clock_logo.png");
+       --qweather-logo:url("/images/background/clock_logo.png");
+       --character:url("/images/background/character.png");
+   }
+   ```
+
+   其中 `--clock-logo` 是时钟中间显示的图片，`--qweather-logo`是天气旁边显示的图片，`--character`是左侧的立绘图片，在根目录中的 `_config.tangyuxian.yml` 中设置 `customStyles` 的值。 默认配置如下：
+
+   yaml
+
+   ```
+   customStyles:
+     - custom.css
+   ```
+
+   然后，在名为 `source` 的路径中创建一个名为 `custom.css` 的文件。这样就可以编写自己的自定义样式。
 
 7. 本地搜索功能依赖
 

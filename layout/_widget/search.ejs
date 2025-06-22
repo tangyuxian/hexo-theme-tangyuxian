@@ -1,23 +1,33 @@
-<% if (theme.searchType == "web"){ %>
 <div class="nexmoe-widget-wrap">
     <div class="nexmoe-widget nexmoe-search">
-        <form id="search_form" action_e="<%= theme.search %>" onsubmit="return search();">
-            <label><input id="search_value" name="q" type="search" placeholder="<%= __('search') %>"></label>
-        </form>
+        <% if (options.search.type=='engine') { %> 
+            <form id="search_form" action_e="<%= options.search.url %>" onsubmit="return search();">
+                <label><input id="search_value" name="q" type="search" placeholder="<%= __('search') %>"></label>
+            </form>
+        <% } else { %>
+            <form id="search_form">
+                <label><input class="st-default-search-input" id="search_value" name="q" type="search" placeholder="<%= __('search') %>" style="
+                    font-size: 15px !important;
+                    height: 56px !important;
+                    background-image: none;
+                "></label>
+            </form>
+        <% } %> 
     </div>
 </div>
-<% } %>
-<!-- 站内搜索 -->
-<% if (theme.searchType == "local"){ %>
-<div class="nexmoe-widget-wrap">
-    <div class="nexmoe-widget nexmoe-search" >
-        <form id="search-form">
-            <label><input type="text" id="local-search-input" name="q" results="0" placeholder="站内搜索" class="input form-control" autocomplete="off" autocorrect="off"/></label>
-            <!-- 清空/重置搜索框 -->
-            <i class="fa fa-times" onclick="resetSearch()"></i>
-        </form>
-    </div>
-    <div id="local-search-result"></div> <!-- 搜索结果区 -->
-    <!-- <p class='no-result'></p> 无匹配时显示，注意在 CSS 中设置默认隐藏 -->
-</div>
+
+<% if (options.search.type == 'local') { %>
+	<%- js_auto_version('js/search') %>
+<%  } %>
+
+<% if (options.search.type=='swiftype') { %>
+	<script type="text/javascript">
+		var id='<%-options.search.id%>';
+		(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+		(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+		e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+		})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+		_st('install', id ,'2.0.0');
+	</script>
 <% } %>

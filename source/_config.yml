@@ -1,0 +1,178 @@
+avatar: /images/head/head.jpg # 网站 Logo
+background: # 既是博客的背景，又是文章默认头图
+  path: /images/background/xiaomai.jpg # 背景图片路径
+  width: 1280
+  height: 726
+tagsCovers: # 文章标签自动匹配封面图
+  es6: /images/post/es6.jpg
+  JavaScript: /images/post/JavaScript.jpg
+  TypeScript: /images/post/TypeScript.jpg
+  css: /images/post/css.jpg
+  node: /images/post/nodejs.jpg
+  vue: /images/post/vue.jpg
+  webpack: /images/post/webpack.jpg
+  git: /images/post/git.jpg
+  java: /images/post/java.jpg
+  echarts: /images/post/echarts.jpg
+  微信小程序: /images/post/wechat_applet.jpg
+  浏览器: /images/post/browser.jpg
+  算法: /images/post/algorithm.jpg
+  数据结构: /images/post/data.jpg
+  工具: /images/post/editor.jpg
+  UI库: /images/post/ui.jpg
+  美化: /images/post/beautify.jpg
+  vite: /images/post/vite.jpg
+favicon:
+  href: /images/head/head.png # 网站图标
+  type: image/png # 图标类型，可能的值有(image/png, image/vnd.microsoft.icon, image/x-icon, image/gif)
+
+function: # 功能开关，可选值（true,false）
+  globalToc: true # 开启该功能会自动开启文章 TOC（文章目录） 功能
+  wordCount: false # 是否开启文章字数统计 (true, false)
+  copyCode: true # 是否允许复制代码块
+
+imageCDN: # 图片 CDN 功能
+  enable: false # 开启该功能
+  origin: /../../images/ # 图片原始目录
+  to: https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/ # 图片 CDN 域名
+
+# 自定义样式，启用后可在站点的source文件夹下新建custom.css自定义站点样式
+customStyles:
+  - custom.css
+
+# 附加图标库 使用说明：https://docs.nexmoe.com/config/icon
+iconlib: //at.alicdn.com/t/font_2421060_8z08qcz5sq3.css # //at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css
+
+menu:
+  回到首页:
+    - /
+    - icon-meishi
+  文章归档:
+    - /archives.html
+    - icon-hanbao1
+  关于糖糖:
+    - /about.html
+    - icon-jiubei1
+  我的朋友:
+    - /friend.html
+    - icon-cola
+#  下载中心:
+#    - /download.html
+#    - icon-tangguo
+
+widgets:
+  - name: search
+    enable: true
+    options:
+      search:
+        type: engine # 可选engine（用搜索引擎搜索）、swiftype、或local（本地搜索）
+        url: https://cn.bing.com/search?q=site:tangyuxian.com # 搜索引擎地址，在type为swiftype时无效 e.g:https://www.google.com/search?q={你的博客链接}
+        id: <swiftype-id> # swiftype的id，见启用教程。在type为engine时无效
+  - name: social
+    enable: true
+    options:
+      social:
+        QQ:
+          - http://wpa.qq.com/msgrd?v=3&uin=2120252100&site=qq&menu=yes
+          - icon-QQ
+          - rgb(64, 196, 255)
+          - rgba(64, 196, 255, .1)
+        mail:
+          - mailto:tangyuxian@vip.qq.com
+          - icon-mail-fill
+          - rgb(249,8,8)
+          - rgba(249,8,8,.1)
+        CSDN:
+          - https://blog.csdn.net/qq_40621378?type=blog
+          - icon-csdn
+          - rgb(199,29,35)
+          - rgba(199,29,35,.1)
+        博客园:
+          - https://www.cnblogs.com/lovetangyuxian/
+          - icon-bokeyuan
+          - rgb(66, 214, 29)
+          - rgba(66, 214, 29, .1)
+        GitHub:
+          - https://github.com/tangyuxian/
+          - icon-github
+          - rgb(25, 23, 23)
+          - rgba(25, 23, 23, .15)
+        gitee:
+          - https://gitee.com/tangyuxian
+          - icon-mayun
+          - rgb(255, 255, 255)
+          - rgb(199,29,35)
+  - name: category
+    enable: true
+  - name: tagcloud
+    enable: true
+    options:
+      maxTagcloud: 17  # 标签云组件显示的标签数量，0 表示不限制
+  - name: hitokoto # 一言 widget
+    enable: false
+    options:
+      widgetHitokoto: # 一言组件
+        loading_placeholder: '🚀 获取中...' # 正在一言时的占位符
+        loading_error_placeholder: '🐞 获取失败...' # 加载一言失败时的占位符
+        category: # 一言句子类型（可选），不配置的话随机获取，详见 https://developer.hitokoto.cn/sentence/#%E5%8F%A5%E5%AD%90%E7%B1%BB%E5%9E%8B-%E5%8F%82%E6%95%B0
+  - name: archive #settings: widgetAchive
+    enable: true
+    options:
+      widgetAchive: #文章归档组件
+        archive_type: 'year' #按月展示还是按年展示
+        show_count: true  #是否展示数量
+  - name: recent_posts
+    enable: true
+  - name: link #settings: widgetLink
+    enable: true
+    options:
+      widgetLink: #链接组件
+        - title: 糖糖第一可爱
+          img: https://cdn.tangyuxian.com/PicGoImages/202304272004917.jpg
+          link : https://tangyuxian.com/
+# 扩展挂件
+pendant:
+  enable: true
+  options:
+    - clock #时钟
+    - qweather #天气
+copyTip: "著作权归作者所有。\n商业转载请联系作者获得授权，非商业转载请注明出处。\n来源：%url" # 自定义复制版权文案,使用 %url 代替当前页面URL, 修改为false禁用
+
+slotHead: |
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1Z7TFL96ZH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-1Z7TFL96ZH');
+  </script>
+slotFooter: |
+
+
+# 自定义侧边栏尾部内容
+slotSidebar: |
+  <br><a target="_blank" href="https://beian.miit.gov.cn/">辽ICP备2021002341号</a>
+  <div style="font-size: 12px">
+     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+     本站总访问量  <a id="busuanzi_value_site_pv"></a> 次<br />
+     本站访客数<a id="busuanzi_value_site_uv"></a>人次
+  </div>
+
+# 评论框插槽
+slotComment: |
+  <div class="valine"></div>
+  <script src='https://lib.baomitu.com/valine/1.3.9/Valine.min.js'></script>
+  <script>
+    new Valine({
+        el: '.valine',
+        appId: 'r5zxC0st0DDjPA9auXzMV7HY-gzGzoHsz',
+        appKey: '3bqCsovpyfTPHUzTHovd3V3V'
+    })
+  </script>
+
+slotCopyright: |
+  <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+slotArticleEnd: | 

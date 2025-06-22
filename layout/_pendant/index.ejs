@@ -1,0 +1,29 @@
+<div class="nexmoe-drawer mdui-drawer nexmoe-pd" id="drawer">
+    <%if (theme.pendant.enable){%>
+        <% theme.pendant.options.forEach(function(pendant){ %>
+            <div class="nexmoe-pd-item">
+                <%- partial('_pendant/' + pendant) %>
+            </div>
+        <% }) %>
+    <%}%>
+</div>
+<style>
+    .nexmoe-pd {
+        left: auto;
+        top: 40px;
+        right: 0;
+    }
+    .nexmoe-pd-item{
+       display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    #nexmoe-pendant .mdui-drawer{
+        width: 305px;
+    }
+    @media screen and (max-width: 1600px) {
+        #nexmoe-pendant {
+            display: none
+        }
+    }
+</style>
