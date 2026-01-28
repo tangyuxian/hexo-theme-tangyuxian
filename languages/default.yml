@@ -19,3 +19,14 @@ copyright:
   author: Author
   permalink: Link
   from: From
+memos:
+  loading: Loading...
+  more: Load More
+  no_dynamic: No Dynamic
+  loading_failed: Loading Failed
+  retry: Retry
+  just_now: Now Now
+  yesterday: Yesterday
+  minutes_ago: Minutes Ago
+  hours_ago: Hours Ago
+  days_ago: Days Ago

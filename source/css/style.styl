@@ -19,21 +19,33 @@ $gutter = 24px;
     --color7-bg: rgba(144, 144, 255, 0.15);
     --color-shadow: rgba(161, 177, 204, 0.4);
     --color-card: #fff;
+    --color-card-opacity: rgba(255, 255, 255, 0.5);
     --color-text-1: #111;
     --color-text-2: #444;
     --color-text-3: #363636;
+    --backgroun-liquid-button-background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.4));
     --clock-logo:url("/images/background/clock_logo.png");
     --qweather-logo:url("/images/background/clock_logo.png");
     --character:url("/images/background/character.png");
+    --chat:url("/images/background/aiChat.png");
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
+// @media (prefers-color-scheme: dark) {
+//     :root {
+//         --color-card: #2b2b2b;
+//         --color-text-1: #fff;
+//         --color-text-2: #ccc;
+//         --color-text-3: #ccc;
+//     }
+// }
+
+.dark:root {
         --color-card: #2b2b2b;
+         --color-card-opacity: rgba(0, 0, 0, 0.5);
         --color-text-1: #fff;
         --color-text-2: #ccc;
         --color-text-3: #ccc;
-    }
+        --backgroun-liquid-button-background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(255, 255, 255, 0.4));
 }
 
 @import '_partial/*';
@@ -321,4 +333,34 @@ photos img {
 
 .gallery-pro > * img {
     width: 100%;
+}
+
+/* 滚动条整体样式 */
+::-webkit-scrollbar {
+    width: 8px;
+    /* 垂直滚动条宽度 */
+    height: 8px;
+    /* 水平滚动条高度 */
+}
+
+/* 滚动条轨道 */
+::-webkit-scrollbar-track {
+    background: var(--color-card-opacity);
+    /* 轨道背景色 */
+    border-radius: 10px;
+    /* 轨道圆角 */
+}
+
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+    background: var(--color2);
+    /* 滑块背景色 */
+    border-radius: 10px;
+    /* 滑块圆角 */
+}
+
+/* 滚动条滑块 hover 状态 */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary);
+    /* hover 时的滑块背景色 */
 }

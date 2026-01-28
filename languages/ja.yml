@@ -16,3 +16,14 @@ copyright:
   author: オリジナルの投稿者
   permalink: 本文リンク
   from: ソース
+memos:
+  loading: モモントを読み込み中...
+  more: モモントを読み込み中...
+  no_dynamic: モモントがありません
+  loading_failed: モモントの読み込みに失敗しました
+  retry: 再度
+  just_now: 現在
+  yesterday: 昨日
+  minutes_ago: 分前
+  hours_ago: 時前
+  days_ago: 日前

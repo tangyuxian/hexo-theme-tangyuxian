@@ -1,4 +1,5 @@
-<div class="clock">
+<div class="nexmoe-pd-item">
+    <div class="clock">
         <div class="memory"></div>
         <div class="memory"></div>
         <div class="memory"></div>
@@ -67,75 +68,80 @@
         </div>
 
     </div>
+</div>
 <script>
-        // ----- Variable declaration
+    // ----- Variable declaration
 
-        var data = {
-                dt: new Date(),
-                hours: {
-                        el: document.querySelector('#hours'),
-                        val: 0 },
+    var data = {
+        dt: new Date(),
+        hours: {
+            el: document.querySelector('#hours'),
+            val: 0
+        },
 
-                minutes: {
-                        el: document.querySelector('#minutes'),
-                        val: 0 },
+        minutes: {
+            el: document.querySelector('#minutes'),
+            val: 0
+        },
 
-                seconds: {
-                        el: document.querySelector('#seconds'),
-                        val: 0 },
+        seconds: {
+            el: document.querySelector('#seconds'),
+            val: 0
+        },
 
-                renderTime: 1000 };
+        renderTime: 1000
+    };
 
 
-        // ----- Clock rendering logic
+    // ----- Clock rendering logic
 
-        updateTime = () => {
-                let hour = data.dt.getHours();
-                let minute = data.dt.getMinutes();
-                let second = data.dt.getSeconds();
+    updateTime = () => {
+        let hour = data.dt.getHours();
+        let minute = data.dt.getMinutes();
+        let second = data.dt.getSeconds();
 
-                data.hours.el.classList.add('moving');
-                data.minutes.el.classList.add('moving');
-                data.seconds.el.classList.add('moving');
+        data.hours.el.classList.add('moving');
+        data.minutes.el.classList.add('moving');
+        data.seconds.el.classList.add('moving');
 
-                data.hours.val = hour == 0 && data.hours.val == 59 * 6 * 5 ? 360 : hour * 6 * 5;
-                data.minutes.val = minute == 0 && data.minutes.val == 59 * 6 ? 360 : minute * 6;
-                data.seconds.val = second == 0 && data.seconds.val == 59 * 6 ? 360 : second * 6;
+        data.hours.val = hour == 0 && data.hours.val == 59 * 6 * 5 ? 360 : hour * 6 * 5;
+        data.minutes.val = minute == 0 && data.minutes.val == 59 * 6 ? 360 : minute * 6;
+        data.seconds.val = second == 0 && data.seconds.val == 59 * 6 ? 360 : second * 6;
 
-                data.hours.el.style.transform = `translate(-50%, -75%) rotate(${data.hours.val}deg)`;
-                data.minutes.el.style.transform = `translate(-50%, -75%) rotate(${data.minutes.val}deg)`;
-                data.seconds.el.style.transform = `translate(-50%, -75%) rotate(${data.seconds.val}deg)`;
+        data.hours.el.style.transform = `translate(-50%, -75%) rotate(${data.hours.val}deg)`;
+        data.minutes.el.style.transform = `translate(-50%, -75%) rotate(${data.minutes.val}deg)`;
+        data.seconds.el.style.transform = `translate(-50%, -75%) rotate(${data.seconds.val}deg)`;
 
-                data.dt.setSeconds(second + 1);
-        };
+        data.dt.setSeconds(second + 1);
+    };
 
-        // ----- Clock execution
+    // ----- Clock execution
 
-        setInterval(() => {
-                updateTime();
-        }, data.renderTime);
-
+    setInterval(() => {
         updateTime();
+    }, data.renderTime);
 
-        // ----- Events area
+    updateTime();
 
-        data.seconds.el.addEventListener('transitionend', () => {
-                data.hours.el.classList.remove('moving');
-                data.minutes.el.classList.remove('moving');
-                data.seconds.el.classList.remove('moving');
+    // ----- Events area
 
-                // if (data.hours.val == 360) {
-                //   data.hours.el.style.transform = 'translate(-50%, -75%) rotate(0deg)';
-                // }
+    data.seconds.el.addEventListener('transitionend', () => {
+        data.hours.el.classList.remove('moving');
+        data.minutes.el.classList.remove('moving');
+        data.seconds.el.classList.remove('moving');
 
-                if (data.minutes.val == 360) {
-                        data.minutes.el.style.transform = 'translate(-50%, -75%) rotate(0deg)';
-                }
+        // if (data.hours.val == 360) {
+        //   data.hours.el.style.transform = 'translate(-50%, -75%) rotate(0deg)';
+        // }
 
-                if (data.seconds.val == 360) {
-                        data.seconds.el.style.transform = 'translate(-50%, -75%) rotate(0deg)';
-                }
-        });
+        if (data.minutes.val == 360) {
+            data.minutes.el.style.transform = 'translate(-50%, -75%) rotate(0deg)';
+        }
+
+        if (data.seconds.val == 360) {
+            data.seconds.el.style.transform = 'translate(-50%, -75%) rotate(0deg)';
+        }
+    });
 
 </script>
 <style>
@@ -151,7 +157,7 @@
         border-radius: 50%;
         box-sizing: border-box;
         box-shadow: 0 1.4vw 2.8vw var(--color2);
-        zoom:0.2
+        zoom: 0.2
     }
 
     .memory {
@@ -671,7 +677,8 @@
         border-radius: 50%;
         transform: translate(-50%, -50%);
     }
-    .clock_logo{
+
+    .clock_logo {
         width: 10vw;
         height: 10vw;
         max-width: 10vh;
@@ -685,30 +692,27 @@
         background-size: 100% 100%;
         background-repeat: no-repeat;
     }
-    .clock_logo{
-            width: 10vw;
-            height: 10vw;
-            max-width: 10vh;
-            max-height: 10vh;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            box-sizing: border-box;
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            background-image: var(--clock-logo);
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
+
+    .clock_logo {
+        width: 10vw;
+        height: 10vw;
+        max-width: 10vh;
+        max-height: 10vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        box-sizing: border-box;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        background-image: var(--clock-logo);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
     }
+
     @media (min-width: 100vh) {
         .clock {
             border: solid 2.8vh var(--color-primary);
             box-shadow: 0 1.4vh 2.8vh var(--color2);
         }
     }
-
 </style>
-
-
-
-

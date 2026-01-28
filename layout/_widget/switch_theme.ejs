@@ -1,0 +1,346 @@
+<div class="nexmoe-widget-wrap" style="background: transparent;box-shadow: none;">
+    <div class="nexmoe-widget nexmoe-switch-theme">
+        <div class="theme-toggle-container" onclick="useToggle()">
+            <!-- 背景元素 -->
+            <div class="toggle-background">
+                <!-- 白云 -->
+                <div class="clouds">
+                    <div class="cloud cloud1"></div>
+                    <div class="cloud cloud2"></div>
+                    <div class="cloud cloud3"></div>
+                </div>
+                <!-- 星空 -->
+                <div class="stars">
+                    <div class="star star1"></div>
+                    <div class="star star2"></div>
+                    <div class="star star3"></div>
+                    <div class="star star4"></div>
+                    <div class="star star5"></div>
+                </div>
+            </div>
+            <!-- 太阳/月亮滑块 -->
+            <div class="theme-slider">
+                <svg class="theme-icon sun" width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="5" fill="#ffd700"/>
+                    <path d="M12 1V3M12 21V23M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M1 12H3M21 12H23M4.22 19.78L5.64 18.36M18.36 5.64L19.78 4.22" stroke="#ffd700" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <svg class="theme-icon moon" width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    /* 主题切换过渡动画 */
+    ::view-transition-group(root) {
+        animation-duration: 0.7s;
+        animation-timing-function: var(--expo-out);
+    }
+
+    ::view-transition-new(root) {
+        animation-name: reveal-light;
+        animation-fill-mode: both;
+    }
+
+    ::view-transition-old(root),
+    .dark::view-transition-old(root) {
+        animation: none;
+        animation-fill-mode: both;
+        z-index: -1;
+    }
+
+    .dark::view-transition-new(root) {
+        animation-name: reveal-dark;
+        animation-fill-mode: both;
+    }
+
+    @keyframes reveal-dark {
+        from {
+            clip-path: polygon(50% -71%, -50% 71%, -50% 71%, 50% -71%);
+        }
+
+        to {
+            clip-path: polygon(50% -71%, -50% 71%, 50% 171%, 171% 50%);
+        }
+    }
+
+    @keyframes reveal-light {
+        from {
+            clip-path: polygon(171% 50%, 50% 171%, 50% 171%, 171% 50%);
+        }
+
+        to {
+            clip-path: polygon(171% 50%, 50% 171%, -50% 71%, 50% -71%);
+        }
+    }
+
+    /* 主题切换矩形样式 */
+    .nexmoe-switch-theme {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .theme-toggle-container {
+        position: relative;
+        width: inherit;
+        height: 70px;
+        background: linear-gradient(135deg, #87CEEB 0%, #E0F7FA 100%);
+        border-radius: 35px;
+        cursor: pointer;
+        overflow: hidden;
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transform: scale(0.8);
+    }
+
+    /* 深色主题下的背景 */
+    .dark .theme-toggle-container {
+        background: linear-gradient(135deg, #0a0e27 0%, #1a1a2e 100%);
+    }
+
+    /* 背景元素容器 */
+    .toggle-background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+    }
+
+    /* 白云样式 */
+    .clouds {
+        position: absolute;
+        left: 70%;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .dark .clouds {
+        opacity: 0;
+        right: -50px;
+    }
+
+    .cloud {
+        position: absolute;
+        background: white;
+        border-radius: 50px;
+        opacity: 0.8;
+        animation: cloudFloat 4s ease-in-out infinite;
+    }
+
+    .cloud1 {
+        width: 30px;
+        height: 20px;
+        top: 0;
+        left: 0;
+    }
+
+    .cloud2 {
+        width: 25px;
+        height: 15px;
+        top: 25px;
+        left: 10px;
+        animation-delay: 1s;
+    }
+
+    .cloud3 {
+        width: 20px;
+        height: 15px;
+        top: 10px;
+        left: 35px;
+        animation-delay: 2s;
+    }
+
+    /* 云朵浮动动画 */
+    @keyframes cloudFloat {
+        0%, 100% {
+            transform: translateY(0) rotate(0deg);
+        }
+        50% {
+            transform: translateY(-5px) rotate(2deg);
+        }
+    }
+
+    /* 星空样式 */
+    .stars {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0;
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .dark .stars {
+        opacity: 1;
+    }
+
+    .star {
+        position: absolute;
+        background: white;
+        border-radius: 50%;
+        animation: starTwinkle 2s ease-in-out infinite;
+    }
+
+    .star1 {
+        width: 3px;
+        height: 3px;
+        top: 0;
+        left: 0;
+    }
+
+    .star2 {
+        width: 2px;
+        height: 2px;
+        top: 20px;
+        left: 25px;
+        animation-delay: 0.5s;
+    }
+
+    .star3 {
+        width: 4px;
+        height: 4px;
+        top: 10px;
+        left: 50px;
+        animation-delay: 1s;
+    }
+
+    .star4 {
+        width: 2px;
+        height: 2px;
+        top: 30px;
+        left: 35px;
+        animation-delay: 1.5s;
+    }
+
+    .star5 {
+        width: 3px;
+        height: 3px;
+        top: 15px;
+        left: 15px;
+        animation-delay: 2s;
+    }
+
+    /* 星星闪烁动画 */
+    @keyframes starTwinkle {
+        0%, 100% {
+            opacity: 0.3;
+            transform: scale(1);
+        }
+        50% {
+            opacity: 1;
+            transform: scale(1.2);
+            filter: drop-shadow(0 0 3px white);
+        }
+    }
+
+    /* 太阳/月亮滑块 */
+    .theme-slider {
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        width: 60px;
+        height: 60px;
+        background: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+
+    .dark .theme-slider {
+        left: calc(100% - 60px - 5px);
+        background: #f0f0f0;
+    }
+
+    /* 太阳和月亮图标 */
+    .theme-icon {
+        position: absolute;
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .sun {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+
+    .moon {
+        opacity: 0;
+        transform: scale(0.8) rotate(-90deg);
+    }
+
+    .dark .sun {
+        opacity: 0;
+        transform: scale(0.8) rotate(90deg);
+    }
+
+    .dark .moon {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+
+    /* 太阳和月亮的发光效果 */
+    @keyframes sunPulse {
+        0%, 100% {
+            filter: drop-shadow(0 0 6px #ffd700);
+        }
+        50% {
+            filter: drop-shadow(0 0 12px #ffd700) drop-shadow(0 0 18px rgba(255, 215, 0, 0.7));
+        }
+    }
+
+    @keyframes moonGlow {
+        0%, 100% {
+            filter: drop-shadow(0 0 4px #e0e7ff);
+        }
+        50% {
+            filter: drop-shadow(0 0 8px #e0e7ff) drop-shadow(0 0 12px rgba(224, 231, 255, 0.7));
+        }
+    }
+
+    /* 应用发光动画 */
+    .sun {
+        animation: sunPulse 3s ease-in-out infinite;
+    }
+
+    .moon {
+        animation: moonGlow 3s ease-in-out infinite;
+    }
+
+    /* 鼠标悬停效果 */
+    .theme-toggle-container:hover {
+        transform: scale(0.9);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    /* 点击效果 */
+    .theme-toggle-container:active {
+        transform: scale(0.98);
+    }
+</style>
+<script>
+    const localTheme = typeof localStorage !== "undefined" && localStorage.getItem("hexo-theme")
+    let theme = localTheme || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+    document.documentElement.className = theme
+
+    function switchTheme() {
+        theme = theme === "dark" ? "light" : "dark"
+        document.documentElement.className = theme
+        localStorage.setItem("hexo-theme", theme)
+    }
+
+    function useToggle() {
+        const isAppearanceTransition = document.startViewTransition && !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        if (!isAppearanceTransition) switchTheme()
+        document.startViewTransition(switchTheme)
+    }
+</script>

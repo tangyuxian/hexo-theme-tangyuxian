@@ -26,7 +26,7 @@ module.exports = class extends Component {
                         <a
                             href={url_for()}
                             title={config.author || config.title}
-                            class="mdui-btn mdui-btn-icon"
+                            class="mdui-btn mdui-btn-icon nexmoe-avatar"
                         >
                             <img
                                 src={theme.avatar }

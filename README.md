@@ -1,12 +1,13 @@
 ## ![img](https://cdn.tangyuxian.com/PicGoImages/20210429104219.png)总览
 
-![image-20210429103541217](https://cdn.tangyuxian.com/PicGoImages/20210429104818.png)
-
+![image-20260128143349312](https://cdn.tangyuxian.com/PicGoImages/20260128143413122.png)
 ------
 
 # [Tangyuxian](https://www.tangyuxian.com)
 
-> 糖羽仙深度定制的HEXO专属主题
+中文 | [英文](./README_en.md)
+
+> 糖羽仙深度定制的HEXO专属主题,支持个性化配置和响应式布局
 <p align="center">
 <img alt="star" src="https://img.shields.io/github/stars/tangyuxian/hexo-theme-tangyuxian.svg"/>
 <img alt="fork" src="https://img.shields.io/github/forks/tangyuxian/hexo-theme-tangyuxian.svg"/>
@@ -21,12 +22,20 @@
 
 ## ![img](https://cdn.tangyuxian.com/PicGoImages/20210429104626.png)贡献
 
-> 本主题基于[**hexo-theme-nexmoe**](https://github.com/tangyuxian/hexo-theme-nexmoe)深度定制,感谢原作者开源
->
+> 本主题基于[**hexo-theme-nexmoe**](https://github.com/tangyuxian/hexo-theme-nexmoe)开发,感谢原作者开源及以下贡献者共同完善
+
+![贡献者](https://camo.githubusercontent.com/b320412fe85a1831fa76b86b73f3bc91480a85fdaf30185725b5279d84d186ba/68747470733a2f2f6f70656e636f6c6c6563746976652e636f6d2f6865786f2d7468656d652d6e65786d6f652f636f6e7472696275746f72732e7376673f77696474683d38393026627574746f6e3d66616c7365)
+
+
 
 ## ![img](https://cdn.tangyuxian.com/PicGoImages/20210429105429.png)演示
 
 [**糖羽仙**](https://www.tangyuxian.com)
+
+![image-20260128143740276](https://cdn.tangyuxian.com/PicGoImages/20260128143742060.png)
+
+![image-20260128143809724](https://cdn.tangyuxian.com/PicGoImages/20260128143811427.png)
+
 
 ## ![img](https://cdn.tangyuxian.com/PicGoImages/20210429112034.png)特色功能
 
@@ -36,6 +45,8 @@
 4. 动态看板娘与静态立绘板互相组合,动静结合互相辉映
 5. 右侧时钟天气控件,自由开关,看文学习不忘记时间,天气变化随时注意,细微之处皆是关怀
 6. ~~即时通讯插件自由开关,让联系您的人与您实时沟通,不错过任何一次机会~~
+6. 集成AI插件,可以内嵌AI聊天界面
+6. 集成[Memos](https://usememos.com/)文章加载功能
 7. 更多特色等待您来探索
 
 ## ![img](https://cdn.tangyuxian.com/PicGoImages/20210429114146.png)教程
@@ -46,7 +57,7 @@
 
    - 运行以下命令以安装 Tangyuxian：
 
-     ```
+     ```bash
      npm install hexo-theme-tangyuxian hexo-renderer-inferno
      ```
 
@@ -55,7 +66,7 @@
      - 方法1 在项目的根目录中编辑 `_config.yml`。将名为 `theme` 的键的值更改为 `tangyuxian`
      - 方法2
 
-     ```
+     ```bash
      hexo config theme tangyuxian
      ```
 
@@ -65,7 +76,7 @@
 
    - 设置文章信息
 
-     ```
+     ```markdown
      ---
      title: 此处为标题
      date: 此处为时间
@@ -90,7 +101,7 @@
 
      为了让文章归档到一个页面,请在项目的根目录`/source/`下创建`archives.md`文件,文件内填写如下内容即可:
 
-     ```
+     ```markdown
      ---
      title: 文章归档
      layout: archives
@@ -112,7 +123,7 @@
 
    在根目录创建文件夹`packages`，将本主题下载后放到该文件夹里，然后在根目录的`package.json`中修改内容
 
-   ```
+   ```json
    "hexo-theme-tangyuxian": "workspace:^"
    ```
 
@@ -134,7 +145,45 @@
 
    ~~`daovoice`需要您到[daovoice官网](http://dashboard.daovoice.io/)申请key并配置~~
 
-6. 主题色个性化配置
+6. AI对话插件（可选）
+
+   聊天框开放为自由嵌入，可以采用dify的工作流生成智能体进行嵌入，在`_config.tangyuxian.yml`配置文件中有预设的配置项
+
+   ```yml
+   # 聊天机器人 可以内嵌ai聊天页面到这里，chat中配置内嵌的地址，比如dify或者是其它定制化的聊天界面
+   chatbot:
+     enable: true
+     options:
+       title: 糖糖的AI分身(BETA)
+       chat: https://www.tangyuxian.com/weifu.html 
+       style: "width: 100%; height: 100%;overflow: hidden;"
+   ```
+
+7. memos插件使用（可选）
+
+   - memos是可完全私有化的备忘录，可通过[markerdown-一键生成专属自己的备忘录 - 糖羽仙](https://www.tangyuxian.com/2026/01/16/kai-fa-gong-ju/md/markerdown-yi-jian-sheng-cheng-zhuan-shu-zi-ji-de-bei-wang-lu/)该文章了解部署过程。当拥有memos后，可在`_config.tangyuxian.yml`配置项中对参数进行调整
+   
+   ```yml
+   # 配置memos组件相关内容，需要使用已有的momos服务才行，可到https://usememos.com/本地部署一套备忘录服务    
+   memos:
+     host: https://memos.tangyuxian.com
+     pageSize: 10
+     filter: "#moments" # 用于筛选memos的标签,默认是#moments。匹配到后会自动移除
+     enableFancybox: true
+   ```
+   
+   - 为了让文章归档到一个页面,请在项目的根目录`/source/`下创建`memos.md`文件,文件内填写如下内容即可:
+   
+   ```markdown
+     ---
+     title: 动态
+     layout: memos
+     permalink: memos.html
+     ---
+   ```
+
+
+8. 主题色个性化配置（可选）
 
    默认配置内容如下：
 
@@ -171,7 +220,7 @@
 
    yaml
 
-   ```
+   ```yml
    customStyles:
      - custom.css
      - themes/umaru/index.css
@@ -179,11 +228,17 @@
 
    然后，在名为 `source` 的路径中创建和配置对应路径的文件。这样就可以编写自己的自定义样式，下面会覆盖上面，注意顺序。
 
-7. 本地搜索功能依赖
+9. 本地搜索功能依赖（可选）
 
-   参考[hexo-generator-search](https://www.npmjs.com/package/hexo-generator-search),配置相关参数,用于生成`search.xml`,本地搜索依赖该文件进行检索
+   参考[hexo-generator-search](https://www.npmjs.com/package/hexo-generator-search),配置相关参数,用于生成`search.json`,本地搜索依赖该文件进行检索
 
-8. 看板娘配置方法
+   ```yml
+   search:
+     path: search.json
+     field: post
+   ```
+
+10. 看板娘配置方法（可选）
 
    参考[hexo-helper-live2d](https://github.com/tangyuxian/hexo-helper-live2d)配置看板娘插件.
 
