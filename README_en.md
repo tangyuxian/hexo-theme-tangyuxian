@@ -15,14 +15,13 @@
 <img alt="issues" src="https://img.shields.io/github/issues/tangyuxian/hexo-theme-tangyuxian.svg"/>
 <a href="https://www.tangyuxian.com"><img alt="Author" src="https://img.shields.io/badge/author-Tangyuxian-red.svg"/></a>
 <a href="http://wpa.qq.com/msgrd?v=3&uin=2120252100&site=qq&menu=yes"><img alt="QQ" src="https://img.shields.io/badge/QQ-2120252100-red.svg"/></a>
-<a href="https://github.com/tangyuxian/hexo-theme-tangyuxian/blob/master/LICENSE"><img alt="license" src="https://img.shields.io/github/license/tangyuxian/hexo-theme-tangyuxian.svg"/></a>
 <img alt="hexo" src="https://img.shields.io/badge/hexo-blue.svg"/>
 <img alt="Download" src="https://img.shields.io/badge/download-29.9KB-brightgreen.svg"/>
 </p>
 
 ## ![img](https://cdn.tangyuxian.com/PicGoImages/20210429104626.png)Contribution
 
-> This theme is developed based on [**hexo-theme-nexmoe**](https://github.com/tangyuxian/hexo-theme-nexmoe). Thanks to the original author for open sourcing it and the following contributors for improving it together.
+> This theme is developed based on [**hexo-theme-nexmoe**](https://github.com/theme-nexmoe/hexo-theme-nexmoe). Thanks to the original author for open sourcing it and the following contributors for improving it together.
 
 ![Contributors](https://camo.githubusercontent.com/b320412fe85a1831fa76b86b73f3bc91480a85fdaf30185725b5279d84d186ba/68747470733a2f2f6f70656e636f6c6c6563746976652e636f6d2f6865786f2d7468656d652d6e65786d6f652f636f6e7472696275746f72732e7376673f77696474683d38393026627574746f6e3d66616c7365)
 
@@ -249,8 +248,6 @@ Bonus: More rich Live2D plugin [Live2D Gift Pack](https://www.google.com/search?
 ## License
 
 > Open sourced under the Apache License 2.0.
-
-<a href="https://github.com/tangyuxian/hexo-theme-tangyuxian/blob/master/LICENSE"><img alt="license" src="https://img.shields.io/github/license/tangyuxian/hexo-theme-tangyuxian.svg"/></a>
 
 ## Show some love
 

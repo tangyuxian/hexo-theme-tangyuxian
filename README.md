@@ -7,7 +7,7 @@
 
 中文 | [英文](./README_en.md)
 
-> 糖羽仙深度定制的HEXO专属主题,支持个性化配置和响应式布局
+> 糖羽仙深度定制的HEXO专属主题
 <p align="center">
 <img alt="star" src="https://img.shields.io/github/stars/tangyuxian/hexo-theme-tangyuxian.svg"/>
 <img alt="fork" src="https://img.shields.io/github/forks/tangyuxian/hexo-theme-tangyuxian.svg"/>
@@ -15,14 +15,13 @@
 <img alt="issues" src="https://img.shields.io/github/issues/tangyuxian/hexo-theme-tangyuxian.svg"/>
 <a href="https://www.tangyuxian.com"><img alt="Author" src="https://img.shields.io/badge/author-糖羽仙-red.svg"/></a>
 <a href="http://wpa.qq.com/msgrd?v=3&uin=2120252100&site=qq&menu=yes"><img alt="QQ" src="https://img.shields.io/badge/QQ-2120252100-red.svg"/></a>
-<a href="https://github.com/tangyuxian/hexo-theme-tangyuxian/blob/master/LICENSE"><img alt="license" src="https://img.shields.io/github/license/tangyuxian/hexo-theme-tangyuxian.svg"/></a>
 <img alt="hexo" src="https://img.shields.io/badge/hexo-blue.svg"/>
 <img alt="Download" src="https://img.shields.io/badge/download-29.9KB-brightgreen.svg"/>
 </p>
 
 ## ![img](https://cdn.tangyuxian.com/PicGoImages/20210429104626.png)贡献
 
-> 本主题基于[**hexo-theme-nexmoe**](https://github.com/tangyuxian/hexo-theme-nexmoe)开发,感谢原作者开源及以下贡献者共同完善
+> 本主题基于[**hexo-theme-nexmoe**](https://github.com/theme-nexmoe/hexo-theme-nexmoe)开发,感谢原作者开源及以下贡献者共同完善
 
 ![贡献者](https://camo.githubusercontent.com/b320412fe85a1831fa76b86b73f3bc91480a85fdaf30185725b5279d84d186ba/68747470733a2f2f6f70656e636f6c6c6563746976652e636f6d2f6865786f2d7468656d652d6e65786d6f652f636f6e7472696275746f72732e7376673f77696474683d38393026627574746f6e3d66616c7365)
 
@@ -249,9 +248,6 @@
 ## ![img](https://cdn.tangyuxian.com/PicGoImages/20210429114804.png)许可
    > 根据 Apache License 2.0 许可证开源。
 
-   <a href="https://github.com/tangyuxian/hexo-theme-tangyuxian/blob/master/LICENSE"><img alt="license" src="https://img.shields.io/github/license/tangyuxian/hexo-theme-tangyuxian.svg"/></a>
-
-   
 
 ## ![img](https://cdn.tangyuxian.com/PicGoImages/20210429144611.png)卖萌
 
