@@ -29,6 +29,12 @@ module.exports = class extends Component {
                         __html: partial('_pendant/index')
                     }}
                 ></div>
+                <div
+                    id="nexmoe-chatbot"
+                    dangerouslySetInnerHTML={{
+                        __html: partial('chatbot')
+                    }}
+                ></div>
                 <div id="nexmoe-footer">
                     <Footer {...this.props} />
                 </div>

@@ -16,3 +16,14 @@ copyright:
   author: Autore
   permalink: Link
   from: Da
+memos:
+  loading: Caricicolo...
+  more: Carica più
+  no_dynamic: No dynamic
+  loading_failed: Caricicolo fallito
+  retry: Riprova
+  just_now: Ora
+  yesterday: Gli scorsa
+  minutes_ago: Minuti fa
+  hours_ago: Orari fa
+  days_ago: Giorn fa

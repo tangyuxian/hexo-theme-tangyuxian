@@ -1,5 +1,4 @@
 <section class="nexmoe-archives">
-    
     <div class="tagcloud nexmoe-rainbow">
         <%- list_tags({
             show_count: true,
@@ -17,6 +16,7 @@
                    post.tags.some(tag => {
                        const tagName = tag.name || '';
                        coverx = theme.tagsCovers[tagName] || "";
+                       return coverx!=="";
                    });
                }
                if(post.cover!==undefined && coverx===""){

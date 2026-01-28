@@ -1,10 +1,14 @@
 // 参考 https://chaooo.github.io/article/20161109.html
 let searchData;
 function loadData(arg) {
+    console.log(arg)
+     if(!arg || arg.length == 0 || !arg[0]) {
+        return document.getElementsByClassName('search-body')[0].innerHTML = '';
+    }
     if (!searchData) {
         const xhr = new XMLHttpRequest();
-        xhr.open('GET', '/content.json', true);
-        xhr.onload = function() {
+        xhr.open('GET', '/search.json', true);
+        xhr.onload = function () {
             if (this.status >= 200 && this.status < 300) {
                 const res = JSON.parse(this.response || this.responseText);
                 searchData = res instanceof Array ? res : res.posts;
@@ -13,7 +17,7 @@ function loadData(arg) {
                 console.error(statusText);
             }
         };
-        xhr.onerror = function() {
+        xhr.onerror = function () {
             console.error(statusText);
         };
         xhr.send();
@@ -32,16 +36,16 @@ function searchkey(keyword) {
                 rend.title = post.title.replace(reg, `<span class="keyword">${word}</span>`);
                 flag = true;
             }
-            const textpos = post.text.search(reg);
+            const textpos = post.content.search(reg);
             if (textpos !== -1) {
-                rend.text = `…${post.text.substring(textpos, textpos + 18)}…`;
+                rend.text = `…${post.content.substring(textpos, textpos + 18)}…`;
                 rend.text = rend.text.replace(reg, `<span class="keyword">${word}</span>`);
                 flag = true;
             }
             if (flag) {
                 rend.title = !rend.title ? post.title : rend.title;
-                rend.text = !rend.text ? post.text : rend.text;
-                rend.href = `/${post.path}`;
+                rend.text = !rend.text ? post.content : rend.text;
+                rend.href = post.url;
                 render(rend);
             }
         });
@@ -51,8 +55,8 @@ function searchkey(keyword) {
 function render(data) {
     const ele = document.createElement('div');
     ele.className = 'search-result';
-    ele.innerHTML = `<a href=${data.href}><h3>${data.title}</h3>
-    <span class="content">${data.text}<br>　</span></a>`;
+    ele.innerHTML = `<a href=${data.href}><div class="search-result-title">${data.title}</div>
+    <div class="search-result-text">${data.text}</div></a>`;
     document.getElementsByClassName('search-body')[0].appendChild(ele);
 }
 

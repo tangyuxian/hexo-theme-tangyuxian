@@ -1,14 +1,15 @@
-<div class="nexmoe-drawer mdui-drawer nexmoe-pd" id="drawer">
-    <%if (theme.pendant.enable){%>
-        <% theme.pendant.options.forEach(function(pendant){ %>
-            <div class="nexmoe-pd-item">
-                <%- partial('_pendant/' + pendant) %>
-            </div>
-        <% }) %>
-    <%}%>
+<div class="nexmoe-drawer  nexmoe-pd" id="drawer" style="overflow-x: auto;overflow-y: auto;">
+
+     <% theme.pendants.forEach(function(pendant){ %>
+        <% if(pendant.enable){ %>
+
+        <%- partial('_pendant/' + pendant.name, {options: pendant.options}) %>
+
+    <% }}) %>
 </div>
 <style>
     .nexmoe-pd {
+        position: fixed;
         left: auto;
         top: 40px;
         right: 0;

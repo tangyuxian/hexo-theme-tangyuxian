@@ -16,3 +16,14 @@ copyright:
   author: 本文作者
   permalink: 本文連結
   from: 文章來源
+memos:
+  loading: 加載中...
+  more: 加載更多
+  no_dynamic: 暂無動態
+  loading_failed: 加載失敗
+  retry: 重試
+  just_now: 刚刚
+  yesterday: 昨天
+  minutes_ago: 分钟前
+  hours_ago: 小时前
+  days_ago: 天前

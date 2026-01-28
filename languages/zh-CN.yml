@@ -19,3 +19,14 @@ copyright:
   author: 本文作者
   permalink: 本文链接
   from: 文章来源
+memos:
+  loading: 加载中...
+  more: 加载更多
+  no_dynamic: 暂无动态
+  loading_failed: 加载失败
+  retry: 重试
+  just_now: 刚刚
+  yesterday: 昨天
+  minutes_ago: 分钟前
+  hours_ago: 小时前
+  days_ago: 天前
