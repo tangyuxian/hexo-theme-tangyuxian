@@ -44,13 +44,13 @@
     }
 
     ::view-transition-old(root),
-    .dark::view-transition-old(root) {
+    [data-theme="dark"]::view-transition-old(root) {
         animation: none;
         animation-fill-mode: both;
         z-index: -1;
     }
 
-    .dark::view-transition-new(root) {
+    [data-theme="dark"]::view-transition-new(root) {
         animation-name: reveal-dark;
         animation-fill-mode: both;
     }
@@ -98,7 +98,7 @@
     }
 
     /* 深色主题下的背景 */
-    .dark .theme-toggle-container {
+    [data-theme="dark"] .theme-toggle-container {
         background: linear-gradient(135deg, #0a0e27 0%, #1a1a2e 100%);
     }
 
@@ -121,7 +121,7 @@
         transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .dark .clouds {
+    [data-theme="dark"] .clouds {
         opacity: 0;
         right: -50px;
     }
@@ -177,7 +177,7 @@
         transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .dark .stars {
+    [data-theme="dark"] .stars {
         opacity: 1;
     }
 
@@ -257,7 +257,7 @@
         z-index: 1;
     }
 
-    .dark .theme-slider {
+    [data-theme="dark"] .theme-slider {
         left: calc(100% - 60px - 5px);
         background: #f0f0f0;
     }
@@ -278,12 +278,12 @@
         transform: scale(0.8) rotate(-90deg);
     }
 
-    .dark .sun {
+    [data-theme="dark"] .sun {
         opacity: 0;
         transform: scale(0.8) rotate(90deg);
     }
 
-    .dark .moon {
+    [data-theme="dark"] .moon {
         opacity: 1;
         transform: scale(1) rotate(0deg);
     }
@@ -330,11 +330,11 @@
 <script>
     const localTheme = typeof localStorage !== "undefined" && localStorage.getItem("hexo-theme")
     let theme = localTheme || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
-    document.documentElement.className = theme
+    document.documentElement.setAttribute("data-theme", theme)
 
     function switchTheme() {
         theme = theme === "dark" ? "light" : "dark"
-        document.documentElement.className = theme
+        document.documentElement.setAttribute("data-theme", theme)
         localStorage.setItem("hexo-theme", theme)
     }
 

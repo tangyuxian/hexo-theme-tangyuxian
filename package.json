@@ -1,6 +1,6 @@
 {
 	"name": "hexo-theme-tangyuxian",
-	"version": "2.0.0-alpha.2",
+	"version": "2.0.0-alpha.3.2",
 	"description": "🔥 A special hexo theme.",
 	"keywords": [
 		"hexo",
@@ -22,7 +22,7 @@
 	"bugs": {
 		"url": "https://github.com/tangyuxian/hexo-theme-tangyuxian/issues"
 	},
-	"homepage": "https://docs.nexmoe.com/",
+	"homepage": "https://www.tangyuxian.com/",
 	"devDependencies": {
 		"eslint": "^8.6.0",
 		"eslint-config-hexo": "^5.0.0",
